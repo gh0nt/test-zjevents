@@ -15,6 +15,9 @@ const config: Config = {
     extend: {
       colors: {
         trueGray: colors.neutral,
+        custom: {
+          gold: "#EFE597",
+        },
       },
     },
     fontFamily: {

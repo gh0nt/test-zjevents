@@ -8,80 +8,116 @@ import userThreeImg from "../../public/img/user3.jpg";
 
 export const Testimonials = () => {
   return (
-    <Container>
-      <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
-        <div className="lg:col-span-2 xl:col-auto">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
-              Share a real <Mark>testimonial</Mark>
-              that hits some of your benefits from one of your popular customer.
-            </p>
+    <div>
+      <Container className="py-12 bg-[#C80B6A] w-full items-center justify-center">
+        <h1 className="text-5xl font-bold text-white uppercase text-center mb-12 ">
+          TESTIMONIALS THAT PROVE OUR VALUE
+        </h1>
+        <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3 max-w-full p-8 mx-auto py-0">
+          <div className="relative">
+            <div className="relative flex flex-col justify-between w-full h-50 bg-[#d51877] px-8 rounded-[20px] py-12 overflow-visible">
+              {/* Círculo blanco alineado a la izquierda */}
+              <div className="absolute left-4 top-12 w-24 h-24 bg-white rounded-full shadow-lg"></div>
 
-            <Avatar
-              image={userOneImg}
-              name="Sarah Steiner"
-              title="VP Sales at Google"
-            />
+              {/* Contenido de texto con padding ajustado */}
+              <div className="pl-24 space-y-6">
+                <p className="text-sm leading-relaxed text-white italic">
+                  &quot;Aorem ipsum dolor sit amet, consectetur sodipscing
+                  elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                  dolore magna aliquyam erat, sed diam voluptua.&quot;
+                </p>
+
+                {/* Información del usuario */}
+
+                <div className="text-lg font-bold text-white">
+                  Full Name, Company
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="relative flex flex-col justify-between w-full h-50 bg-[#d51877] px-8 rounded-[20px] py-12 overflow-visible">
+              {/* Círculo blanco alineado a la izquierda */}
+              <div className="absolute left-4 top-12 w-24 h-24 bg-white rounded-full shadow-lg"></div>
+
+              {/* Contenido de texto con padding ajustado */}
+              <div className="pl-24 space-y-6">
+                <p className="text-sm leading-relaxed text-white italic">
+                  &quot;Aorem ipsum dolor sit amet, consectetur sodipscing
+                  elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                  dolore magna aliquyam erat, sed diam voluptua.&quot;
+                </p>
+
+                {/* Información del usuario */}
+
+                <div className="text-lg font-bold text-white">
+                  Full Name, Company
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="relative flex flex-col justify-between w-full h-50 bg-[#d51877] px-8 rounded-[20px] py-12 overflow-visible">
+              {/* Círculo blanco alineado a la izquierda */}
+              <div className="absolute left-4 top-12 w-24 h-24 bg-white rounded-full shadow-lg"></div>
+
+              {/* Contenido de texto con padding ajustado */}
+              <div className="pl-24 space-y-6">
+                <p className="text-sm leading-relaxed text-white italic">
+                  &quot;Aorem ipsum dolor sit amet, consectetur sodipscing
+                  elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                  dolore magna aliquyam erat, sed diam voluptua.&quot;
+                </p>
+
+                {/* Información del usuario */}
+
+                <div className="text-lg font-bold text-white">
+                  Full Name, Company
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
-              Make sure you only pick the <Mark>right sentence</Mark>
-              to keep it short and simple.
-            </p>
+      </Container>
 
-            <Avatar
-              image={userTwoImg}
-              name="Dylan Ambrose"
-              title="Lead marketer at Netflix"
+      <div className="bg-white p-8 ">
+        <div className="flex items-center justify-between gap-8">
+          {/* Texto al lado izquierdo */}
+          <div className="text-[#2A3A52] ml-6">
+            <h2 className="text-4xl font-black uppercase mb-1 tracking-tighter">
+              SUBSCRIBE
+            </h2>
+            <h3 className="text-4xl font-black uppercase tracking-tighter">
+              FOR UPDATES
+            </h3>
+          </div>
+
+          {/* Contenedor de input + botón */}
+          <div className="flex flex-1 gap-4 max-w-10xl px-7">
+            <input
+              type="email"
+              placeholder="Email address*"
+              className="w-full px-6 py-3 rounded-full bg-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-200"
             />
+
+            <button
+              className="whitespace-nowrap px-8 py-3 text-white font-semibold uppercase tracking-wider transition-all hover:brightness-110"
+              style={{
+                background:
+                  "linear-gradient(283deg, #FBAD28 0%, #FFAE7E 18%, #FB59A2 62%, #F47EF4 100%)",
+                borderRadius: "30px",
+              }}
+            >
+              GET TICKETS
+            </button>
           </div>
         </div>
-        <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
-              This is an <Mark>awesome</Mark> landing page template I&apos;ve
-              seen. I would use this for anything.
-            </p>
-
-            <Avatar
-              image={userThreeImg}
-              name="Gabrielle Winn"
-              title="Co-founder of Acme Inc"
-            />
-          </div>
-        </div>
-      </div>
-    </Container>
-  );
-};
-
-interface AvatarProps {
-  image: any;
-  name: string;
-  title: string;
-}
-
-function Avatar(props: Readonly<AvatarProps>) {
-  return (
-    <div className="flex items-center mt-8 space-x-3">
-      <div className="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
-        <Image
-          src={props.image}
-          width="40"
-          height="40"
-          alt="Avatar"
-          placeholder="blur"
-        />
-      </div>
-      <div>
-        <div className="text-lg font-medium">{props.name}</div>
-        <div className="text-gray-600 dark:text-gray-400">{props.title}</div>
       </div>
     </div>
   );
-}
+};
 
 function Mark(props: { readonly children: React.ReactNode }) {
   return (
