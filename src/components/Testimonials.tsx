@@ -10,7 +10,7 @@ export const Testimonials = () => {
   return (
     <div>
       <Container className="py-12 bg-[#C80B6A] w-full items-center justify-center">
-        <h1 className="text-5xl font-bold text-white uppercase text-center mb-12 ">
+        <h1 className="text-5xl font-bold text-white uppercase text-center mb-12 drop-shadow-lg">
           TESTIMONIALS THAT PROVE OUR VALUE
         </h1>
         <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3 max-w-full p-8 mx-auto py-0">

@@ -1,8 +1,7 @@
 "use client";
-import Link from "next/link";
-import ThemeChanger from "./DarkSwitch";
-import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
+import Image from "next/image";
+import Link from "next/link";
 
 export const Navbar = () => {
   const navigation = ["OUR SHOWS", "ATTENDES", "EXHIBITORS", "RESOURCES"];
@@ -34,7 +33,6 @@ export const Navbar = () => {
 
         {/* get started  */}
         <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
-          <ThemeChanger />
           <div className="hidden mr-3 lg:flex nav__item">
             <Link
               href="/"
@@ -75,21 +73,45 @@ export const Navbar = () => {
 
               <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
                 <>
-                  {navigation.map((item, index) => (
-                    <Link
-                      key={index}
-                      href="/"
-                      className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none"
+                  {navigation.map((item) => (
+                    <div
+                      key={item}
+                      style={{
+                        display: "inline-block",
+                        margin: "0 15px",
+                        position: "relative",
+                      }}
                     >
-                      {item}
-                    </Link>
+                      <span
+                        style={{
+                          cursor: "pointer",
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: "4px",
+                          color: "#333",
+                          fontWeight: "bold",
+                          fontSize: "14px",
+                          transition: "color 0.2s",
+                        }}
+                      >
+                        {item}
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 15 15"
+                          fill="none"
+                          style={{ marginLeft: "2px" }}
+                        >
+                          <path
+                            d="M4 6L7.5 9.5L11 6"
+                            stroke="#666"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                      </span>
+                    </div>
                   ))}
-                  <Link
-                    href="/"
-                    className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
-                  >
-                    Get Started
-                  </Link>
                 </>
               </Disclosure.Panel>
             </>

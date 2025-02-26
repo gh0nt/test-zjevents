@@ -50,25 +50,25 @@ export const Hero = () => {
       </div>
       <Container2 style={{ marginTop: "-10%" }}>
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl w-full mx-auto mt-8 p-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl w-full mx-auto mt-8 p-8">
             {/* Contenedor 1: NOMINATE */}
             <div
-              className="flex flex-col justify-between text-left bg-white py-8 px-6 rounded-lg h-64"
+              className="flex flex-col justify-between text-left bg-white py-10 px-6 rounded-3xl h-70 relative"
               style={{
                 backdropFilter: "blur(10px)",
                 WebkitBackdropFilter: "blur(10px)",
-                backgroundColor: "rgba(255, 255, 255, 0.2)", // Fondo plateado transparente
+                backgroundColor: "rgba(155, 155, 155, 0.2)", // Fondo plateado transparente
                 border: "1px solid rgba(128, 128, 128, 0.3)", // Borde gris transparente
-                borderRadius: "12px", // Bordes redondeados
               }}
             >
               <div>
-                <h2 className="text-2xl font-bold text-white">NOMINATE</h2>
-                <p className="text-white">
+                <h2 className="text-2xl font-extrabold text-white">NOMINATE</h2>
+                <p className="text-white py-2">
                   It all starts with a nomination. Simply pick your favorite
                   brand from the list and make them eligible to win an award!
                 </p>
               </div>
+
               <button
                 className="mt-4 px-6 py-3 bg-custom-gold text-white rounded-full w-64 relative overflow-hidden"
                 style={{
@@ -77,22 +77,26 @@ export const Hero = () => {
               >
                 <span className="text-shadow relative z-10">NOMINATE NOW</span>
               </button>
+
+              {/* White circle button with arrow */}
+              <button className="absolute bottom-4 right-4 w-12 h-12 flex items-center  justify-center bg-transparent text-white border-2 border-white rounded-full shadow-lg transition-transform hover:scale-110">
+                ➝
+              </button>
             </div>
 
             {/* Contenedor 2: VOTE */}
             <div
-              className="flex flex-col justify-between text-left bg-white py-8 px-6 rounded-lg h-64"
+              className="flex flex-col justify-between text-left bg-white py-10 px-6 rounded-3xl h-70"
               style={{
                 backdropFilter: "blur(10px)",
                 WebkitBackdropFilter: "blur(10px)",
-                backgroundColor: "rgba(255, 255, 255, 0.2)", // Fondo plateado transparente
+                backgroundColor: "rgba(155, 155, 155, 0.2)", // Fondo plateado transparente
                 border: "1px solid rgba(128, 128, 128, 0.3)", // Borde gris transparente
-                borderRadius: "12px", // Bordes redondeados
               }}
             >
               <div>
-                <h2 className="text-2xl font-bold text-white">VOTE</h2>
-                <p className="text-white">
+                <h2 className="text-2xl font-extrabold text-white">VOTE</h2>
+                <p className="text-white py-2">
                   Your vote decides the winners. There are no judges, the
                   nominee with the most valid votes takes home the trophy!
                 </p>
@@ -100,22 +104,26 @@ export const Hero = () => {
               <button className="mt-4 px-6 py-3 bg-[#C80B6A] text-white rounded-full w-64 shadow-[inset_0_2px_4px_0_rgba(0,0,0,0.2)]">
                 VOTE NOW
               </button>
+              <button className="absolute bottom-4 right-4 w-12 h-12 flex items-center  justify-center bg-transparent text-white border-2 border-white rounded-full shadow-lg transition-transform hover:scale-110">
+                ➝
+              </button>
             </div>
 
             {/* Contenedor 3: PAST WINNERS */}
             <div
-              className="flex flex-col justify-between text-left bg-white py-8 px-6 rounded-lg h-64"
+              className="flex flex-col justify-between text-left bg-white py-10 px-6 rounded-3xl h-70"
               style={{
                 backdropFilter: "blur(10px)",
                 WebkitBackdropFilter: "blur(10px)",
-                backgroundColor: "rgba(255, 255, 255, 0.2)", // Fondo plateado transparente
+                backgroundColor: "rgba(155, 155, 155, 0.2)", // Fondo plateado transparente
                 border: "1px solid rgba(128, 128, 128, 0.3)", // Borde gris transparente
-                borderRadius: "12px", // Bordes redondeados
               }}
             >
               <div>
-                <h2 className="text-2xl font-bold text-white">PAST WINNERS</h2>
-                <p className="text-white">
+                <h2 className="text-2xl font-extrabold text-white">
+                  PAST WINNERS
+                </h2>
+                <p className="text-white py-2">
                   Discover award-winning brands. See the winners from past
                   events and relive the moment.
                 </p>

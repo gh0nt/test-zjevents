@@ -9,18 +9,18 @@ export function Footer() {
   return (
     <div className="mt-auto relative inset-x-0 bottom-0 z-50 bg-[#333333]">
       <Container>
-        <div className="grid max-w-screen-2xl grid-cols-1 py-16 mx-auto lg:grid-cols-3 gap-8">
+        <div className="grid max-w-screen-2xl grid-cols-1 py-14 mx-auto lg:grid-cols-3 gap-8">
           {/* Columna 1: Logo + Redes Sociales */}
           <div className="flex flex-col items-start">
             <Link
               href="/"
               className="flex items-center space-x-2 text-2xl font-medium"
             >
-              <Image
+              <img
                 src="/img/logowhite.svg"
                 alt="Logo"
-                width="32"
-                height="32"
+                width="64"
+                height="64"
                 className="w-auto"
               />
             </Link>

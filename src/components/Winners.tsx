@@ -203,7 +203,7 @@ export const Winners = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen overflow-hidden ]">
+    <div className="w-full min-h-screen overflow-hidden">
       <Container className="!p-0">
         <div className="max-w-6xl mx-auto px-4 py-12">
           {/* Encabezado con líneas */}
@@ -223,15 +223,14 @@ export const Winners = () => {
             </div>
           </div>
 
-          <div className="bg-[#941b58] rounded-xl p-8 border-2 border-white">
+          <div className="bg-[url('/img/mellow_fellow.svg')] opacity-90 rounded-xl p-8 border-2 border-white">
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-transparent p-6 rounded-lg border border-white">
-                <h4 className="text-sm font-semibold text-white uppercase tracking-wide">
-                  Insert Image Marcelo
-                </h4>
-              </div>
-              <div className="bg-transparent p-6 rounded-lg border border-white">
-                <h2 className="text-6xl font-extrabold text-white uppercase tracking-wide">
+              <div
+                className="rounded-lg border border-transparent bg-[url('/img/mellow_fellow_logo.png')] bg-cover bg-center bg-no-repeat"
+                style={{ width: "500px", height: "auto" }}
+              ></div>
+              <div className="bg-transparent p-6 rounded-lg border border-transparent">
+                <h2 className="text-6xl font-extrabold text-white uppercase tracking-wide drop-shadow-lg">
                   Best Alternative Product
                 </h2>
                 <p className="text-3xl text-white mt-2">Mellow Fellow</p>
@@ -242,7 +241,7 @@ export const Winners = () => {
                       boxShadow: "inset 0 -40px 20px rgba(0, 0, 0, 0.35)",
                     }}
                   >
-                    <span className="text-shadow relative z-10">
+                    <span className="text-shadow relative z-10 text-sm">
                       VIEW WINNER
                     </span>
                   </button>
@@ -252,8 +251,8 @@ export const Winners = () => {
                       boxShadow: "inset 0 -40px 20px rgba(0, 0, 0, 0.05)",
                     }}
                   >
-                    <span className="text-shadow relative z-10">
-                      SEE NEXT CATEGORY
+                    <span className="text-shadow text-sm relative z-10">
+                      SEE NEXT CATEGORY ➝
                     </span>
                   </button>
                 </div>
@@ -261,30 +260,25 @@ export const Winners = () => {
             </div>
           </div>
 
-          {/* MAIN CONTAINER */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-28">
+          {/* LEFT CONTENT COLUMN */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-24">
             <div className="space-y-4">
               {winnersData.map((item, index) => (
                 <div
                   key={index}
-                  className={`p-6 rounded-xl border-2 cursor-pointer transition-all ${
+                  className={`p-4 rounded-xl border-2 cursor-pointer transition-all ${
                     activeIndex === index
-                      ? "bg-transparent border-white"
-                      : "bg-transparent border-gray-200 hover:border-custom-gold"
+                      ? "bg-white/20 border-transparent"
+                      : "bg-white/10 border-transparent hover:border-custom-gold"
                   }`}
-                  onClick={() =>
-                    setActiveIndex(activeIndex === index ? null : index)
-                  }
+                  onClick={() => setActiveIndex(index)} // ❌ Remove the toggle condition
                 >
                   <div className="flex justify-between items-center">
                     <h3 className="text-xl font-semibold text-white">
                       {item.event}
                     </h3>
-                    {activeIndex === index ? (
-                      <MinusSmallIcon className="w-6 h-6 text-white" />
-                    ) : (
-                      <PlusSmallIcon className="w-6 h-6 text-white" />
-                    )}
+                    <PlusSmallIcon className="w-6 h-6 text-white" />{" "}
+                    {/* Always show "-" */}
                   </div>
                 </div>
               ))}
@@ -302,8 +296,8 @@ export const Winners = () => {
                 leaveTo="opacity-0"
               >
                 {activeIndex !== null && (
-                  <Transition.Child
-                    as="div"
+                  <TransitionChild
+                    as="div" // Add this line to render a div instead of a Fragment
                     className="bg-transparent rounded-xl p-8 border-2 border-transparent shadow-lg"
                   >
                     <div className="space-y-4">
@@ -323,7 +317,7 @@ export const Winners = () => {
                         )
                       )}
                     </div>
-                  </Transition.Child>
+                  </TransitionChild>
                 )}
               </Transition>
             </div>
